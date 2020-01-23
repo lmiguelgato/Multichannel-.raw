@@ -20,8 +20,6 @@ disp('[1/5] Initialization ...')
   out_mkdir = mkdir(multichannel_wav_path);
   if (out_mkdir == 1)
     disp(['* Output directory set to "' multichannel_wav_path '"'])
-  else
-    disp(['* Output directory set to "' multichannel_wav_path '" (new directory)'])
   end
 
 disp('Done.')
