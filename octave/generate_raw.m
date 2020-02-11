@@ -2,7 +2,10 @@ function generate_raw (single_wavs_path, N)
   
   root_wav_name = 'wav_mic';
   multichannel_wav_path = [single_wavs_path '/'];
-  out_mkdir = mkdir(multichannel_wav_path);
+  
+  if exist(multichannel_wav_path, 'dir') ~= 7
+    mkdir(multichannel_wav_path);
+  end
   
   [tmp, fs] = audioread([single_wavs_path '/' root_wav_name '1.wav']);
   [m, n] = size(tmp);
